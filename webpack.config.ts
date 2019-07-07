@@ -1,16 +1,5 @@
 import * as webpack from 'webpack';
 
-const externals: webpack.ExternalsElement[] = [
-  {
-    react: 'React',
-    'react-dom': 'ReactDOM'
-  },
-  {
-    react: 'react',
-    'react-dom': 'react-dom'
-  }
-];
-
 const config: webpack.Configuration = {
   entry: './src/index.tsx',
   devtool: 'source-map',
@@ -24,7 +13,6 @@ const config: webpack.Configuration = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
-  externals,
   module: {
     rules: [
       {
